@@ -1,8 +1,15 @@
-Marketers -> Create Notification -> Sending the request to an API -> publishes the message to the RabbitMQ Queue.
+Marketers -> Create Notification -> Sending the request to an API -> Publishes the message to the RabbitMQ Queue.
 Customers -> Process these messages
 
 Producer: Publishes the message
 Consumer: Receives and processes the message
 Queue: Stores messages reliably
-Exchanges: Route messages to Queue
+Exchanges: Route messages to Queue - Routing Mechanism that decides how the messages published by producers should be delivered to the queue.
 Acknowledgements: Ensure messages aren't lost
+
+Decoupling Notification Sending => Async Processing, API responds immediately while the processing happens async.
+
+Direct Exchange: Routes messages to the queues where the binding key exactly matches the routing key of the message.
+FanOut Exchange: Routes messages to all the queues bound to it.
+Topic Exchange: Routes messages based on the pattern matching between the routing key and the binding key.
+Headers Exchange: Routes messages based upon the headers not the routing key.
