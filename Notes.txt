@@ -1,0 +1,8 @@
+Marketers -> Create Notification -> Sending the request to an API -> publishes the message to the RabbitMQ Queue.
+Customers -> Process these messages
+
+Producer: Publishes the message
+Consumer: Receives and processes the message
+Queue: Stores messages reliably
+Exchanges: Route messages to Queue
+Acknowledgements: Ensure messages aren't lost
