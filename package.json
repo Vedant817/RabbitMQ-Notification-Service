@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:producer": "ts-node src/producer.ts",
-    "start:consumer": "ts-node src/consumer.ts"
+    "start:producer": "node --loader ts-node/esm src/producer.ts",
+    "start:consumer": "node --loader ts-node/esm src/consumer.ts"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/Vedant817/RabbitMQ-Notification-Service/issues"
   },
